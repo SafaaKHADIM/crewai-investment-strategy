@@ -1,0 +1,22 @@
+[project]
+name = "travel-crew-app"
+version = "0.1.0"
+description = "Simple multi-agent travel recommendation demo using CrewAI"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "crewai[tools]>=1.5.0",
+    "pydantic>=2.0",
+    "python-dotenv",
+    "rich",
+    "streamlit",
+    "langchain-community",
+     "litellm",
+]
+
+[project.scripts]
+travel-crew = "travel_crew_app.main:main"
+
+
+[tool.uv]
+package = true
